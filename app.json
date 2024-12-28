@@ -23,6 +23,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "expo": {
+      "plugins": [
+        [
+          "expo-image-picker",
+          {
+            "cameraPermission": "The app need acess to your camera in oreder to take photos of your favourites places"
+          }
+        ]
+      ]
     }
+  
   }
 }
