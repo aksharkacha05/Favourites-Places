@@ -31,6 +31,12 @@
           {
             "cameraPermission": "The app need acess to your camera in oreder to take photos of your favourites places"
           }
+        ],
+        [
+          "expo-location",
+          {
+            "locationAlwaysAndWhenInUsePermission": "The app need acess to your location in oreder to take location of your Favourites Places"
+          }
         ]
       ]
     }
