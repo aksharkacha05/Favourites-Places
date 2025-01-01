@@ -2,6 +2,7 @@ import {Alert, Button, Image, View,Text, StyleSheet} from 'react-native'
 import {launchCameraAsync , useCameraPermissions ,PermissionStatus,} from 'expo-image-picker'
 import { useState } from 'react';
 import {Colors} from '../../constant/color'
+import OutlinedButton from '../Ui/OutlineButton';
 
 function ImagePicker (){
     const [pickedImage, setPickedImage]= useState();
@@ -32,7 +33,7 @@ function ImagePicker (){
             quality:0.5,
         });
 
-        console.log(image);
+        // console.log(image);
 
         if (!image.canceled && image.assets && image.assets.length > 0) {
             const imageUri = image.assets[0].uri;
@@ -51,7 +52,7 @@ function ImagePicker (){
             <View style={styles.imagePreview}>
             {imagePreview}
             </View>
-            <Button title='Take Image' onPress={takeImageHandler}/>
+            <OutlinedButton icon="camera" onPress={takeImageHandler}>Take Image</OutlinedButton>
         </View>
     )
 }
