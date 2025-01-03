@@ -3,10 +3,10 @@ import { getCurrentPositionAsync,useForegroundPermissions,PermissionStatus } fro
 
 import OutlinedButton from "../Ui/OutlineButton"
 import { Colors } from "../../constant/color";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getMapPreview } from "../../util/Location";
 
-function LocationPicker (){
+function LocationPicker ({onLocationPick}){
     const [pickedLocation,setPickedLocation]= useState();
     const [locationPermissonInformation, requestPermisson] = useForegroundPermissions();
     async function verifyPermission(){
@@ -24,6 +24,10 @@ function LocationPicker (){
 
     async function getLocationHandler(){
         const hasPermisson = await verifyPermission();
+
+        useEffect(()=>{
+            onLocationPick(pickedLocation)
+        },[pickedLocation,onLocationPick])
 
         if(!hasPermisson){
             return;

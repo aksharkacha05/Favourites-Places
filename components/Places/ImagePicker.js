@@ -4,7 +4,7 @@ import { useState } from 'react';
 import {Colors} from '../../constant/color'
 import OutlinedButton from '../Ui/OutlineButton';
 
-function ImagePicker (){
+function ImagePicker ({onTakeImage}){
     const [pickedImage, setPickedImage]= useState();
 
     const [cameraPermissionsInformation,requestPermisson] = useCameraPermissions();
@@ -38,6 +38,7 @@ function ImagePicker (){
         if (!image.canceled && image.assets && image.assets.length > 0) {
             const imageUri = image.assets[0].uri;
             setPickedImage({ uri: imageUri });
+            onTakeImage(imageUri)
         } else {
             Alert.alert('Image capture cancelled');
         }
