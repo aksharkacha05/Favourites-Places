@@ -39,7 +39,9 @@
           }
         ]
       ]
-    }
-  
+    },
+    "plugins": [
+      "expo-sqlite"
+    ]
   }
 }
