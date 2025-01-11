@@ -46,6 +46,4 @@ This project is designed to help you track your favorite places. It allows you t
 - Push to the branch: `git push origin feature/YourFeature`
 - Open a pull request
 
-## Contact
 
-If you have any questions, please contact [aksharkacha04@gmail.com].
