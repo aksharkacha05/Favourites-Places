@@ -36,7 +36,7 @@ This project is designed to help you track your favorite places. It allows you t
     npm start
     ```
 
-2. Open your browser and go to `http://localhost:3000`.
+2. Open your browser and go to `http://localhost:3500`.
 
 ## Contributing
 
