@@ -27,17 +27,6 @@ This project is designed to help you track your favorite places. It allows you t
     ```bash
     npm install
     ```
-
-## Usage
-
-1. Start the application:
-
-    ```bash
-    npm start
-    ```
-
-2. Open your browser and go to `http://localhost:3500`.
-
 ## Contributing
 
 - Fork the repository
